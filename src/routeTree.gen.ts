@@ -10,33 +10,141 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as HowItWorksRouteImport } from './routes/how-it-works'
+import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as ProhibitedItemsRouteImport } from './routes/prohibited-items'
+import { Route as RulesRouteImport } from './routes/rules'
+import { Route as SafetyRouteImport } from './routes/safety'
+import { Route as TermsRouteImport } from './routes/terms'
+import { Route as ExploreRequestsRouteImport } from './routes/explore.requests'
+import { Route as ExploreTripsRouteImport } from './routes/explore.trips'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const HowItWorksRoute = HowItWorksRouteImport.update({
+  id: '/how-it-works',
+  path: '/how-it-works',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProhibitedItemsRoute = ProhibitedItemsRouteImport.update({
+  id: '/prohibited-items',
+  path: '/prohibited-items',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RulesRoute = RulesRouteImport.update({
+  id: '/rules',
+  path: '/rules',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SafetyRoute = SafetyRouteImport.update({
+  id: '/safety',
+  path: '/safety',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ExploreRequestsRoute = ExploreRequestsRouteImport.update({
+  id: '/explore/requests',
+  path: '/explore/requests',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ExploreTripsRoute = ExploreTripsRouteImport.update({
+  id: '/explore/trips',
+  path: '/explore/trips',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/how-it-works': typeof HowItWorksRoute
+  '/privacy': typeof PrivacyRoute
+  '/prohibited-items': typeof ProhibitedItemsRoute
+  '/rules': typeof RulesRoute
+  '/safety': typeof SafetyRoute
+  '/terms': typeof TermsRoute
+  '/explore/requests': typeof ExploreRequestsRoute
+  '/explore/trips': typeof ExploreTripsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/how-it-works': typeof HowItWorksRoute
+  '/privacy': typeof PrivacyRoute
+  '/prohibited-items': typeof ProhibitedItemsRoute
+  '/rules': typeof RulesRoute
+  '/safety': typeof SafetyRoute
+  '/terms': typeof TermsRoute
+  '/explore/requests': typeof ExploreRequestsRoute
+  '/explore/trips': typeof ExploreTripsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/how-it-works': typeof HowItWorksRoute
+  '/privacy': typeof PrivacyRoute
+  '/prohibited-items': typeof ProhibitedItemsRoute
+  '/rules': typeof RulesRoute
+  '/safety': typeof SafetyRoute
+  '/terms': typeof TermsRoute
+  '/explore/requests': typeof ExploreRequestsRoute
+  '/explore/trips': typeof ExploreTripsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/how-it-works'
+    | '/privacy'
+    | '/prohibited-items'
+    | '/rules'
+    | '/safety'
+    | '/terms'
+    | '/explore/requests'
+    | '/explore/trips'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/how-it-works'
+    | '/privacy'
+    | '/prohibited-items'
+    | '/rules'
+    | '/safety'
+    | '/terms'
+    | '/explore/requests'
+    | '/explore/trips'
+  id:
+    | '__root__'
+    | '/'
+    | '/how-it-works'
+    | '/privacy'
+    | '/prohibited-items'
+    | '/rules'
+    | '/safety'
+    | '/terms'
+    | '/explore/requests'
+    | '/explore/trips'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  HowItWorksRoute: typeof HowItWorksRoute
+  PrivacyRoute: typeof PrivacyRoute
+  ProhibitedItemsRoute: typeof ProhibitedItemsRoute
+  RulesRoute: typeof RulesRoute
+  SafetyRoute: typeof SafetyRoute
+  TermsRoute: typeof TermsRoute
+  ExploreRequestsRoute: typeof ExploreRequestsRoute
+  ExploreTripsRoute: typeof ExploreTripsRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +156,75 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/how-it-works': {
+      id: '/how-it-works'
+      path: '/how-it-works'
+      fullPath: '/how-it-works'
+      preLoaderRoute: typeof HowItWorksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/prohibited-items': {
+      id: '/prohibited-items'
+      path: '/prohibited-items'
+      fullPath: '/prohibited-items'
+      preLoaderRoute: typeof ProhibitedItemsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rules': {
+      id: '/rules'
+      path: '/rules'
+      fullPath: '/rules'
+      preLoaderRoute: typeof RulesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/safety': {
+      id: '/safety'
+      path: '/safety'
+      fullPath: '/safety'
+      preLoaderRoute: typeof SafetyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/explore/requests': {
+      id: '/explore/requests'
+      path: '/explore/requests'
+      fullPath: '/explore/requests'
+      preLoaderRoute: typeof ExploreRequestsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/explore/trips': {
+      id: '/explore/trips'
+      path: '/explore/trips'
+      fullPath: '/explore/trips'
+      preLoaderRoute: typeof ExploreTripsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  HowItWorksRoute: HowItWorksRoute,
+  PrivacyRoute: PrivacyRoute,
+  ProhibitedItemsRoute: ProhibitedItemsRoute,
+  RulesRoute: RulesRoute,
+  SafetyRoute: SafetyRoute,
+  TermsRoute: TermsRoute,
+  ExploreRequestsRoute: ExploreRequestsRoute,
+  ExploreTripsRoute: ExploreTripsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
