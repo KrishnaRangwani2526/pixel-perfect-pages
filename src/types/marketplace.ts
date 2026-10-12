@@ -1,0 +1,11 @@
+export type ListingStatus = 'Draft' | 'Published' | 'Offer accepted' | 'In progress' | 'Awaiting completion confirmation' | 'Mutually completed' | 'Disputed completion' | 'Cancelled' | 'Expired' | 'Restricted';
+export type OfferStatus = 'Pending' | 'Accepted' | 'Rejected' | 'Withdrawn' | 'Expired' | 'Cancelled';
+export interface User { id: string; name: string; email: string; city: string; bio: string; emailConfirmed: boolean; role: 'user' | 'admin'; color: string; }
+export interface ItemRequest { id: string; ownerId: string; title: string; description: string; origin: string; destination: string; requiredBy: string; category: string; status: ListingStatus; image: string; budget?: string; weight: number; purchasing: string; productUrl?: string; }
+export interface Trip { id: string; ownerId: string; origin: string; destination: string; departure: string; arrival: string; capacity: number; categories: string[]; constraints: string; status: ListingStatus; }
+export interface Offer { id: string; requestId: string; travellerId: string; tripId?: string; message: string; purchasing: string; handover: string; date: string; status: OfferStatus; history: string[]; }
+export interface Agreement { id: string; requestId: string; offerId: string; requesterId: string; travellerId: string; status: ListingStatus; responses: { userId: string; action: 'declare' | 'confirm' | 'dispute'; note: string; at: string }[]; }
+export interface Conversation { id: string; requestId: string; participants: string[]; messages: { id: string; senderId: string; text: string; at: string }[]; }
+export interface Notification { id: string; userId: string; title: string; text: string; read: boolean; at: string; }
+export interface Report { id: string; userId: string; target: string; reason: string; details: string; status: 'Open' | 'Dismissed' | 'Action taken'; rationale?: string; }
+export interface DemoState { sessionId: string | null; users: User[]; requests: ItemRequest[]; trips: Trip[]; offers: Offer[]; agreements: Agreement[]; conversations: Conversation[]; notifications: Notification[]; reports: Report[]; blocks: Record<string, string[]>; audit: { action: string; target: string; rationale: string; at: string; actor: string }[]; }
