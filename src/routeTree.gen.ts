@@ -10,18 +10,80 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AdminRouteImport } from './routes/admin'
+import { Route as BlockedUsersRouteImport } from './routes/blocked-users'
+import { Route as CreateRequestRouteImport } from './routes/create-request'
+import { Route as CreateTripRouteImport } from './routes/create-trip'
+import { Route as DashboardRouteImport } from './routes/dashboard'
+import { Route as ForgotPasswordRouteImport } from './routes/forgot-password'
 import { Route as HowItWorksRouteImport } from './routes/how-it-works'
+import { Route as LoginRouteImport } from './routes/login'
+import { Route as MatchesRouteImport } from './routes/matches'
+import { Route as MessagesRouteImport } from './routes/messages'
+import { Route as MyOffersRouteImport } from './routes/my-offers'
+import { Route as MyRequestsRouteImport } from './routes/my-requests'
+import { Route as MyTripsRouteImport } from './routes/my-trips'
+import { Route as NotificationsRouteImport } from './routes/notifications'
 import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as ProfileRouteImport } from './routes/profile'
 import { Route as ProhibitedItemsRouteImport } from './routes/prohibited-items'
+import { Route as ResetPasswordRouteImport } from './routes/reset-password'
 import { Route as RulesRouteImport } from './routes/rules'
 import { Route as SafetyRouteImport } from './routes/safety'
+import { Route as SignupRouteImport } from './routes/signup'
 import { Route as TermsRouteImport } from './routes/terms'
+import { Route as VerifyEmailRouteImport } from './routes/verify-email'
+import { Route as AdminAuditHistoryRouteImport } from './routes/admin_.audit-history'
+import { Route as AdminListingsRouteImport } from './routes/admin_.listings'
+import { Route as AdminModerationHistoryRouteImport } from './routes/admin_.moderation-history'
+import { Route as AdminReportsRouteImport } from './routes/admin_.reports'
+import { Route as AdminUsersRouteImport } from './routes/admin_.users'
+import { Route as AgreementsAgreementIdRouteImport } from './routes/agreements.$agreementId'
+import { Route as CompletionAgreementIdRouteImport } from './routes/completion.$agreementId'
 import { Route as ExploreRequestsRouteImport } from './routes/explore.requests'
 import { Route as ExploreTripsRouteImport } from './routes/explore.trips'
+import { Route as MessagesConversationIdRouteImport } from './routes/messages_.$conversationId'
+import { Route as RequestsRequestIdRouteImport } from './routes/requests.$requestId'
+import { Route as TripsTripIdRouteImport } from './routes/trips.$tripId'
+import { Route as UsersUserIdRouteImport } from './routes/users.$userId'
+import { Route as AdminReportsReportIdRouteImport } from './routes/admin_.reports_.$reportId'
+import { Route as RequestsRequestIdEditRouteImport } from './routes/requests.$requestId_.edit'
+import { Route as RequestsRequestIdOfferRouteImport } from './routes/requests.$requestId_.offer'
+import { Route as TripsTripIdEditRouteImport } from './routes/trips.$tripId_.edit'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminRoute = AdminRouteImport.update({
+  id: '/admin',
+  path: '/admin',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlockedUsersRoute = BlockedUsersRouteImport.update({
+  id: '/blocked-users',
+  path: '/blocked-users',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CreateRequestRoute = CreateRequestRouteImport.update({
+  id: '/create-request',
+  path: '/create-request',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CreateTripRoute = CreateTripRouteImport.update({
+  id: '/create-trip',
+  path: '/create-trip',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DashboardRoute = DashboardRouteImport.update({
+  id: '/dashboard',
+  path: '/dashboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ForgotPasswordRoute = ForgotPasswordRouteImport.update({
+  id: '/forgot-password',
+  path: '/forgot-password',
   getParentRoute: () => rootRouteImport,
 } as any)
 const HowItWorksRoute = HowItWorksRouteImport.update({
@@ -29,14 +91,59 @@ const HowItWorksRoute = HowItWorksRouteImport.update({
   path: '/how-it-works',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LoginRoute = LoginRouteImport.update({
+  id: '/login',
+  path: '/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MatchesRoute = MatchesRouteImport.update({
+  id: '/matches',
+  path: '/matches',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MessagesRoute = MessagesRouteImport.update({
+  id: '/messages',
+  path: '/messages',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MyOffersRoute = MyOffersRouteImport.update({
+  id: '/my-offers',
+  path: '/my-offers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MyRequestsRoute = MyRequestsRouteImport.update({
+  id: '/my-requests',
+  path: '/my-requests',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MyTripsRoute = MyTripsRouteImport.update({
+  id: '/my-trips',
+  path: '/my-trips',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NotificationsRoute = NotificationsRouteImport.update({
+  id: '/notifications',
+  path: '/notifications',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PrivacyRoute = PrivacyRouteImport.update({
   id: '/privacy',
   path: '/privacy',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProfileRoute = ProfileRouteImport.update({
+  id: '/profile',
+  path: '/profile',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ProhibitedItemsRoute = ProhibitedItemsRouteImport.update({
   id: '/prohibited-items',
   path: '/prohibited-items',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResetPasswordRoute = ResetPasswordRouteImport.update({
+  id: '/reset-password',
+  path: '/reset-password',
   getParentRoute: () => rootRouteImport,
 } as any)
 const RulesRoute = RulesRouteImport.update({
@@ -49,9 +156,54 @@ const SafetyRoute = SafetyRouteImport.update({
   path: '/safety',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SignupRoute = SignupRouteImport.update({
+  id: '/signup',
+  path: '/signup',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TermsRoute = TermsRouteImport.update({
   id: '/terms',
   path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VerifyEmailRoute = VerifyEmailRouteImport.update({
+  id: '/verify-email',
+  path: '/verify-email',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminAuditHistoryRoute = AdminAuditHistoryRouteImport.update({
+  id: '/admin_/audit-history',
+  path: '/admin/audit-history',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminListingsRoute = AdminListingsRouteImport.update({
+  id: '/admin_/listings',
+  path: '/admin/listings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminModerationHistoryRoute = AdminModerationHistoryRouteImport.update({
+  id: '/admin_/moderation-history',
+  path: '/admin/moderation-history',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminReportsRoute = AdminReportsRouteImport.update({
+  id: '/admin_/reports',
+  path: '/admin/reports',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminUsersRoute = AdminUsersRouteImport.update({
+  id: '/admin_/users',
+  path: '/admin/users',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AgreementsAgreementIdRoute = AgreementsAgreementIdRouteImport.update({
+  id: '/agreements/$agreementId',
+  path: '/agreements/$agreementId',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CompletionAgreementIdRoute = CompletionAgreementIdRouteImport.update({
+  id: '/completion/$agreementId',
+  path: '/completion/$agreementId',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ExploreRequestsRoute = ExploreRequestsRouteImport.update({
@@ -64,87 +216,351 @@ const ExploreTripsRoute = ExploreTripsRouteImport.update({
   path: '/explore/trips',
   getParentRoute: () => rootRouteImport,
 } as any)
+const MessagesConversationIdRoute = MessagesConversationIdRouteImport.update({
+  id: '/messages_/$conversationId',
+  path: '/messages/$conversationId',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RequestsRequestIdRoute = RequestsRequestIdRouteImport.update({
+  id: '/requests/$requestId',
+  path: '/requests/$requestId',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TripsTripIdRoute = TripsTripIdRouteImport.update({
+  id: '/trips/$tripId',
+  path: '/trips/$tripId',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const UsersUserIdRoute = UsersUserIdRouteImport.update({
+  id: '/users/$userId',
+  path: '/users/$userId',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminReportsReportIdRoute = AdminReportsReportIdRouteImport.update({
+  id: '/admin_/reports_/$reportId',
+  path: '/admin/reports/$reportId',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RequestsRequestIdEditRoute = RequestsRequestIdEditRouteImport.update({
+  id: '/requests/$requestId_/edit',
+  path: '/requests/$requestId/edit',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RequestsRequestIdOfferRoute = RequestsRequestIdOfferRouteImport.update({
+  id: '/requests/$requestId_/offer',
+  path: '/requests/$requestId/offer',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TripsTripIdEditRoute = TripsTripIdEditRouteImport.update({
+  id: '/trips/$tripId_/edit',
+  path: '/trips/$tripId/edit',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/admin': typeof AdminRoute
+  '/blocked-users': typeof BlockedUsersRoute
+  '/create-request': typeof CreateRequestRoute
+  '/create-trip': typeof CreateTripRoute
+  '/dashboard': typeof DashboardRoute
+  '/forgot-password': typeof ForgotPasswordRoute
   '/how-it-works': typeof HowItWorksRoute
+  '/login': typeof LoginRoute
+  '/matches': typeof MatchesRoute
+  '/messages': typeof MessagesRoute
+  '/my-offers': typeof MyOffersRoute
+  '/my-requests': typeof MyRequestsRoute
+  '/my-trips': typeof MyTripsRoute
+  '/notifications': typeof NotificationsRoute
   '/privacy': typeof PrivacyRoute
+  '/profile': typeof ProfileRoute
   '/prohibited-items': typeof ProhibitedItemsRoute
+  '/reset-password': typeof ResetPasswordRoute
   '/rules': typeof RulesRoute
   '/safety': typeof SafetyRoute
+  '/signup': typeof SignupRoute
   '/terms': typeof TermsRoute
+  '/verify-email': typeof VerifyEmailRoute
+  '/admin/audit-history': typeof AdminAuditHistoryRoute
+  '/admin/listings': typeof AdminListingsRoute
+  '/admin/moderation-history': typeof AdminModerationHistoryRoute
+  '/admin/reports': typeof AdminReportsRoute
+  '/admin/users': typeof AdminUsersRoute
+  '/agreements/$agreementId': typeof AgreementsAgreementIdRoute
+  '/completion/$agreementId': typeof CompletionAgreementIdRoute
   '/explore/requests': typeof ExploreRequestsRoute
   '/explore/trips': typeof ExploreTripsRoute
+  '/messages/$conversationId': typeof MessagesConversationIdRoute
+  '/requests/$requestId': typeof RequestsRequestIdRoute
+  '/trips/$tripId': typeof TripsTripIdRoute
+  '/users/$userId': typeof UsersUserIdRoute
+  '/admin/reports/$reportId': typeof AdminReportsReportIdRoute
+  '/requests/$requestId/edit': typeof RequestsRequestIdEditRoute
+  '/requests/$requestId/offer': typeof RequestsRequestIdOfferRoute
+  '/trips/$tripId/edit': typeof TripsTripIdEditRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/admin': typeof AdminRoute
+  '/blocked-users': typeof BlockedUsersRoute
+  '/create-request': typeof CreateRequestRoute
+  '/create-trip': typeof CreateTripRoute
+  '/dashboard': typeof DashboardRoute
+  '/forgot-password': typeof ForgotPasswordRoute
   '/how-it-works': typeof HowItWorksRoute
+  '/login': typeof LoginRoute
+  '/matches': typeof MatchesRoute
+  '/messages': typeof MessagesRoute
+  '/my-offers': typeof MyOffersRoute
+  '/my-requests': typeof MyRequestsRoute
+  '/my-trips': typeof MyTripsRoute
+  '/notifications': typeof NotificationsRoute
   '/privacy': typeof PrivacyRoute
+  '/profile': typeof ProfileRoute
   '/prohibited-items': typeof ProhibitedItemsRoute
+  '/reset-password': typeof ResetPasswordRoute
   '/rules': typeof RulesRoute
   '/safety': typeof SafetyRoute
+  '/signup': typeof SignupRoute
   '/terms': typeof TermsRoute
+  '/verify-email': typeof VerifyEmailRoute
+  '/admin/audit-history': typeof AdminAuditHistoryRoute
+  '/admin/listings': typeof AdminListingsRoute
+  '/admin/moderation-history': typeof AdminModerationHistoryRoute
+  '/admin/reports': typeof AdminReportsRoute
+  '/admin/users': typeof AdminUsersRoute
+  '/agreements/$agreementId': typeof AgreementsAgreementIdRoute
+  '/completion/$agreementId': typeof CompletionAgreementIdRoute
   '/explore/requests': typeof ExploreRequestsRoute
   '/explore/trips': typeof ExploreTripsRoute
+  '/messages/$conversationId': typeof MessagesConversationIdRoute
+  '/requests/$requestId': typeof RequestsRequestIdRoute
+  '/trips/$tripId': typeof TripsTripIdRoute
+  '/users/$userId': typeof UsersUserIdRoute
+  '/admin/reports/$reportId': typeof AdminReportsReportIdRoute
+  '/requests/$requestId/edit': typeof RequestsRequestIdEditRoute
+  '/requests/$requestId/offer': typeof RequestsRequestIdOfferRoute
+  '/trips/$tripId/edit': typeof TripsTripIdEditRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/admin': typeof AdminRoute
+  '/blocked-users': typeof BlockedUsersRoute
+  '/create-request': typeof CreateRequestRoute
+  '/create-trip': typeof CreateTripRoute
+  '/dashboard': typeof DashboardRoute
+  '/forgot-password': typeof ForgotPasswordRoute
   '/how-it-works': typeof HowItWorksRoute
+  '/login': typeof LoginRoute
+  '/matches': typeof MatchesRoute
+  '/messages': typeof MessagesRoute
+  '/my-offers': typeof MyOffersRoute
+  '/my-requests': typeof MyRequestsRoute
+  '/my-trips': typeof MyTripsRoute
+  '/notifications': typeof NotificationsRoute
   '/privacy': typeof PrivacyRoute
+  '/profile': typeof ProfileRoute
   '/prohibited-items': typeof ProhibitedItemsRoute
+  '/reset-password': typeof ResetPasswordRoute
   '/rules': typeof RulesRoute
   '/safety': typeof SafetyRoute
+  '/signup': typeof SignupRoute
   '/terms': typeof TermsRoute
+  '/verify-email': typeof VerifyEmailRoute
+  '/admin_/audit-history': typeof AdminAuditHistoryRoute
+  '/admin_/listings': typeof AdminListingsRoute
+  '/admin_/moderation-history': typeof AdminModerationHistoryRoute
+  '/admin_/reports': typeof AdminReportsRoute
+  '/admin_/users': typeof AdminUsersRoute
+  '/agreements/$agreementId': typeof AgreementsAgreementIdRoute
+  '/completion/$agreementId': typeof CompletionAgreementIdRoute
   '/explore/requests': typeof ExploreRequestsRoute
   '/explore/trips': typeof ExploreTripsRoute
+  '/messages_/$conversationId': typeof MessagesConversationIdRoute
+  '/requests/$requestId': typeof RequestsRequestIdRoute
+  '/trips/$tripId': typeof TripsTripIdRoute
+  '/users/$userId': typeof UsersUserIdRoute
+  '/admin_/reports_/$reportId': typeof AdminReportsReportIdRoute
+  '/requests/$requestId_/edit': typeof RequestsRequestIdEditRoute
+  '/requests/$requestId_/offer': typeof RequestsRequestIdOfferRoute
+  '/trips/$tripId_/edit': typeof TripsTripIdEditRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/admin'
+    | '/blocked-users'
+    | '/create-request'
+    | '/create-trip'
+    | '/dashboard'
+    | '/forgot-password'
     | '/how-it-works'
+    | '/login'
+    | '/matches'
+    | '/messages'
+    | '/my-offers'
+    | '/my-requests'
+    | '/my-trips'
+    | '/notifications'
     | '/privacy'
+    | '/profile'
     | '/prohibited-items'
+    | '/reset-password'
     | '/rules'
     | '/safety'
+    | '/signup'
     | '/terms'
+    | '/verify-email'
+    | '/admin/audit-history'
+    | '/admin/listings'
+    | '/admin/moderation-history'
+    | '/admin/reports'
+    | '/admin/users'
+    | '/agreements/$agreementId'
+    | '/completion/$agreementId'
     | '/explore/requests'
     | '/explore/trips'
+    | '/messages/$conversationId'
+    | '/requests/$requestId'
+    | '/trips/$tripId'
+    | '/users/$userId'
+    | '/admin/reports/$reportId'
+    | '/requests/$requestId/edit'
+    | '/requests/$requestId/offer'
+    | '/trips/$tripId/edit'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/admin'
+    | '/blocked-users'
+    | '/create-request'
+    | '/create-trip'
+    | '/dashboard'
+    | '/forgot-password'
     | '/how-it-works'
+    | '/login'
+    | '/matches'
+    | '/messages'
+    | '/my-offers'
+    | '/my-requests'
+    | '/my-trips'
+    | '/notifications'
     | '/privacy'
+    | '/profile'
     | '/prohibited-items'
+    | '/reset-password'
     | '/rules'
     | '/safety'
+    | '/signup'
     | '/terms'
+    | '/verify-email'
+    | '/admin/audit-history'
+    | '/admin/listings'
+    | '/admin/moderation-history'
+    | '/admin/reports'
+    | '/admin/users'
+    | '/agreements/$agreementId'
+    | '/completion/$agreementId'
     | '/explore/requests'
     | '/explore/trips'
+    | '/messages/$conversationId'
+    | '/requests/$requestId'
+    | '/trips/$tripId'
+    | '/users/$userId'
+    | '/admin/reports/$reportId'
+    | '/requests/$requestId/edit'
+    | '/requests/$requestId/offer'
+    | '/trips/$tripId/edit'
   id:
     | '__root__'
     | '/'
+    | '/admin'
+    | '/blocked-users'
+    | '/create-request'
+    | '/create-trip'
+    | '/dashboard'
+    | '/forgot-password'
     | '/how-it-works'
+    | '/login'
+    | '/matches'
+    | '/messages'
+    | '/my-offers'
+    | '/my-requests'
+    | '/my-trips'
+    | '/notifications'
     | '/privacy'
+    | '/profile'
     | '/prohibited-items'
+    | '/reset-password'
     | '/rules'
     | '/safety'
+    | '/signup'
     | '/terms'
+    | '/verify-email'
+    | '/admin_/audit-history'
+    | '/admin_/listings'
+    | '/admin_/moderation-history'
+    | '/admin_/reports'
+    | '/admin_/users'
+    | '/agreements/$agreementId'
+    | '/completion/$agreementId'
     | '/explore/requests'
     | '/explore/trips'
+    | '/messages_/$conversationId'
+    | '/requests/$requestId'
+    | '/trips/$tripId'
+    | '/users/$userId'
+    | '/admin_/reports_/$reportId'
+    | '/requests/$requestId_/edit'
+    | '/requests/$requestId_/offer'
+    | '/trips/$tripId_/edit'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AdminRoute: typeof AdminRoute
+  BlockedUsersRoute: typeof BlockedUsersRoute
+  CreateRequestRoute: typeof CreateRequestRoute
+  CreateTripRoute: typeof CreateTripRoute
+  DashboardRoute: typeof DashboardRoute
+  ForgotPasswordRoute: typeof ForgotPasswordRoute
   HowItWorksRoute: typeof HowItWorksRoute
+  LoginRoute: typeof LoginRoute
+  MatchesRoute: typeof MatchesRoute
+  MessagesRoute: typeof MessagesRoute
+  MyOffersRoute: typeof MyOffersRoute
+  MyRequestsRoute: typeof MyRequestsRoute
+  MyTripsRoute: typeof MyTripsRoute
+  NotificationsRoute: typeof NotificationsRoute
   PrivacyRoute: typeof PrivacyRoute
+  ProfileRoute: typeof ProfileRoute
   ProhibitedItemsRoute: typeof ProhibitedItemsRoute
+  ResetPasswordRoute: typeof ResetPasswordRoute
   RulesRoute: typeof RulesRoute
   SafetyRoute: typeof SafetyRoute
+  SignupRoute: typeof SignupRoute
   TermsRoute: typeof TermsRoute
+  VerifyEmailRoute: typeof VerifyEmailRoute
+  AdminAuditHistoryRoute: typeof AdminAuditHistoryRoute
+  AdminListingsRoute: typeof AdminListingsRoute
+  AdminModerationHistoryRoute: typeof AdminModerationHistoryRoute
+  AdminReportsRoute: typeof AdminReportsRoute
+  AdminUsersRoute: typeof AdminUsersRoute
+  AgreementsAgreementIdRoute: typeof AgreementsAgreementIdRoute
+  CompletionAgreementIdRoute: typeof CompletionAgreementIdRoute
   ExploreRequestsRoute: typeof ExploreRequestsRoute
   ExploreTripsRoute: typeof ExploreTripsRoute
+  MessagesConversationIdRoute: typeof MessagesConversationIdRoute
+  RequestsRequestIdRoute: typeof RequestsRequestIdRoute
+  TripsTripIdRoute: typeof TripsTripIdRoute
+  UsersUserIdRoute: typeof UsersUserIdRoute
+  AdminReportsReportIdRoute: typeof AdminReportsReportIdRoute
+  RequestsRequestIdEditRoute: typeof RequestsRequestIdEditRoute
+  RequestsRequestIdOfferRoute: typeof RequestsRequestIdOfferRoute
+  TripsTripIdEditRoute: typeof TripsTripIdEditRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -156,11 +572,102 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/admin': {
+      id: '/admin'
+      path: '/admin'
+      fullPath: '/admin'
+      preLoaderRoute: typeof AdminRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blocked-users': {
+      id: '/blocked-users'
+      path: '/blocked-users'
+      fullPath: '/blocked-users'
+      preLoaderRoute: typeof BlockedUsersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/create-request': {
+      id: '/create-request'
+      path: '/create-request'
+      fullPath: '/create-request'
+      preLoaderRoute: typeof CreateRequestRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/create-trip': {
+      id: '/create-trip'
+      path: '/create-trip'
+      fullPath: '/create-trip'
+      preLoaderRoute: typeof CreateTripRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dashboard': {
+      id: '/dashboard'
+      path: '/dashboard'
+      fullPath: '/dashboard'
+      preLoaderRoute: typeof DashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/forgot-password': {
+      id: '/forgot-password'
+      path: '/forgot-password'
+      fullPath: '/forgot-password'
+      preLoaderRoute: typeof ForgotPasswordRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/how-it-works': {
       id: '/how-it-works'
       path: '/how-it-works'
       fullPath: '/how-it-works'
       preLoaderRoute: typeof HowItWorksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/login': {
+      id: '/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof LoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/matches': {
+      id: '/matches'
+      path: '/matches'
+      fullPath: '/matches'
+      preLoaderRoute: typeof MatchesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/messages': {
+      id: '/messages'
+      path: '/messages'
+      fullPath: '/messages'
+      preLoaderRoute: typeof MessagesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/my-offers': {
+      id: '/my-offers'
+      path: '/my-offers'
+      fullPath: '/my-offers'
+      preLoaderRoute: typeof MyOffersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/my-requests': {
+      id: '/my-requests'
+      path: '/my-requests'
+      fullPath: '/my-requests'
+      preLoaderRoute: typeof MyRequestsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/my-trips': {
+      id: '/my-trips'
+      path: '/my-trips'
+      fullPath: '/my-trips'
+      preLoaderRoute: typeof MyTripsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/notifications': {
+      id: '/notifications'
+      path: '/notifications'
+      fullPath: '/notifications'
+      preLoaderRoute: typeof NotificationsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/privacy': {
@@ -170,11 +677,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PrivacyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/profile': {
+      id: '/profile'
+      path: '/profile'
+      fullPath: '/profile'
+      preLoaderRoute: typeof ProfileRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/prohibited-items': {
       id: '/prohibited-items'
       path: '/prohibited-items'
       fullPath: '/prohibited-items'
       preLoaderRoute: typeof ProhibitedItemsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reset-password': {
+      id: '/reset-password'
+      path: '/reset-password'
+      fullPath: '/reset-password'
+      preLoaderRoute: typeof ResetPasswordRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/rules': {
@@ -191,11 +712,74 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SafetyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/signup': {
+      id: '/signup'
+      path: '/signup'
+      fullPath: '/signup'
+      preLoaderRoute: typeof SignupRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/terms': {
       id: '/terms'
       path: '/terms'
       fullPath: '/terms'
       preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/verify-email': {
+      id: '/verify-email'
+      path: '/verify-email'
+      fullPath: '/verify-email'
+      preLoaderRoute: typeof VerifyEmailRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin_/audit-history': {
+      id: '/admin_/audit-history'
+      path: '/admin/audit-history'
+      fullPath: '/admin/audit-history'
+      preLoaderRoute: typeof AdminAuditHistoryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin_/listings': {
+      id: '/admin_/listings'
+      path: '/admin/listings'
+      fullPath: '/admin/listings'
+      preLoaderRoute: typeof AdminListingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin_/moderation-history': {
+      id: '/admin_/moderation-history'
+      path: '/admin/moderation-history'
+      fullPath: '/admin/moderation-history'
+      preLoaderRoute: typeof AdminModerationHistoryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin_/reports': {
+      id: '/admin_/reports'
+      path: '/admin/reports'
+      fullPath: '/admin/reports'
+      preLoaderRoute: typeof AdminReportsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin_/users': {
+      id: '/admin_/users'
+      path: '/admin/users'
+      fullPath: '/admin/users'
+      preLoaderRoute: typeof AdminUsersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/agreements/$agreementId': {
+      id: '/agreements/$agreementId'
+      path: '/agreements/$agreementId'
+      fullPath: '/agreements/$agreementId'
+      preLoaderRoute: typeof AgreementsAgreementIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/completion/$agreementId': {
+      id: '/completion/$agreementId'
+      path: '/completion/$agreementId'
+      fullPath: '/completion/$agreementId'
+      preLoaderRoute: typeof CompletionAgreementIdRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/explore/requests': {
@@ -212,19 +796,107 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ExploreTripsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/messages_/$conversationId': {
+      id: '/messages_/$conversationId'
+      path: '/messages/$conversationId'
+      fullPath: '/messages/$conversationId'
+      preLoaderRoute: typeof MessagesConversationIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/requests/$requestId': {
+      id: '/requests/$requestId'
+      path: '/requests/$requestId'
+      fullPath: '/requests/$requestId'
+      preLoaderRoute: typeof RequestsRequestIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/trips/$tripId': {
+      id: '/trips/$tripId'
+      path: '/trips/$tripId'
+      fullPath: '/trips/$tripId'
+      preLoaderRoute: typeof TripsTripIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/users/$userId': {
+      id: '/users/$userId'
+      path: '/users/$userId'
+      fullPath: '/users/$userId'
+      preLoaderRoute: typeof UsersUserIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin_/reports_/$reportId': {
+      id: '/admin_/reports_/$reportId'
+      path: '/admin/reports/$reportId'
+      fullPath: '/admin/reports/$reportId'
+      preLoaderRoute: typeof AdminReportsReportIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/requests/$requestId_/edit': {
+      id: '/requests/$requestId_/edit'
+      path: '/requests/$requestId/edit'
+      fullPath: '/requests/$requestId/edit'
+      preLoaderRoute: typeof RequestsRequestIdEditRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/requests/$requestId_/offer': {
+      id: '/requests/$requestId_/offer'
+      path: '/requests/$requestId/offer'
+      fullPath: '/requests/$requestId/offer'
+      preLoaderRoute: typeof RequestsRequestIdOfferRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/trips/$tripId_/edit': {
+      id: '/trips/$tripId_/edit'
+      path: '/trips/$tripId/edit'
+      fullPath: '/trips/$tripId/edit'
+      preLoaderRoute: typeof TripsTripIdEditRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AdminRoute: AdminRoute,
+  BlockedUsersRoute: BlockedUsersRoute,
+  CreateRequestRoute: CreateRequestRoute,
+  CreateTripRoute: CreateTripRoute,
+  DashboardRoute: DashboardRoute,
+  ForgotPasswordRoute: ForgotPasswordRoute,
   HowItWorksRoute: HowItWorksRoute,
+  LoginRoute: LoginRoute,
+  MatchesRoute: MatchesRoute,
+  MessagesRoute: MessagesRoute,
+  MyOffersRoute: MyOffersRoute,
+  MyRequestsRoute: MyRequestsRoute,
+  MyTripsRoute: MyTripsRoute,
+  NotificationsRoute: NotificationsRoute,
   PrivacyRoute: PrivacyRoute,
+  ProfileRoute: ProfileRoute,
   ProhibitedItemsRoute: ProhibitedItemsRoute,
+  ResetPasswordRoute: ResetPasswordRoute,
   RulesRoute: RulesRoute,
   SafetyRoute: SafetyRoute,
+  SignupRoute: SignupRoute,
   TermsRoute: TermsRoute,
+  VerifyEmailRoute: VerifyEmailRoute,
+  AdminAuditHistoryRoute: AdminAuditHistoryRoute,
+  AdminListingsRoute: AdminListingsRoute,
+  AdminModerationHistoryRoute: AdminModerationHistoryRoute,
+  AdminReportsRoute: AdminReportsRoute,
+  AdminUsersRoute: AdminUsersRoute,
+  AgreementsAgreementIdRoute: AgreementsAgreementIdRoute,
+  CompletionAgreementIdRoute: CompletionAgreementIdRoute,
   ExploreRequestsRoute: ExploreRequestsRoute,
   ExploreTripsRoute: ExploreTripsRoute,
+  MessagesConversationIdRoute: MessagesConversationIdRoute,
+  RequestsRequestIdRoute: RequestsRequestIdRoute,
+  TripsTripIdRoute: TripsTripIdRoute,
+  UsersUserIdRoute: UsersUserIdRoute,
+  AdminReportsReportIdRoute: AdminReportsReportIdRoute,
+  RequestsRequestIdEditRoute: RequestsRequestIdEditRoute,
+  RequestsRequestIdOfferRoute: RequestsRequestIdOfferRoute,
+  TripsTripIdEditRoute: TripsTripIdEditRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
