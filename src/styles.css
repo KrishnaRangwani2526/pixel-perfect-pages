@@ -24,7 +24,7 @@
 }
 * { box-sizing: border-box; border-color: var(--border); letter-spacing: 0; }
 body { margin: 0; background: var(--background); color: var(--foreground); font-family: var(--font-sans); font-size: 15px; line-height: 1.55; -webkit-font-smoothing: antialiased; }
-a { text-decoration: none; color: inherit; }
+@layer base { a { text-decoration: none; color: inherit; } }
 button,a,input,select,textarea { -webkit-tap-highlight-color: transparent; }
 button { font-family: inherit; }
 :focus-visible { outline: 2px solid var(--primary); outline-offset: 4px; }
