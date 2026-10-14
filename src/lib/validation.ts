@@ -1,0 +1,7 @@
+import { z } from 'zod';
+const city = z.string().trim().min(2, 'Enter a city.');
+const date = z.string().regex(/^\d{4}-\d{2}-\d{2}$/, 'Choose a valid date.');
+export const requestSchema = z.object({title:z.string().trim().min(3,'Add a descriptive item title.'),description:z.string().trim().min(3,'Describe the item.'),origin:city,destination:city,requiredBy:date,weight:z.number().positive('Weight must be greater than zero.'),productUrl:z.string().url('Use a valid product link.').optional()}).refine(v=>v.origin.toLowerCase()!==v.destination.toLowerCase(),{message:'Choose different origin and destination cities.',path:['destination']});
+export const tripSchema=z.object({origin:city,destination:city,departure:date,arrival:date,capacity:z.number().min(0,'Capacity cannot be negative.')}).refine(v=>v.origin.toLowerCase()!==v.destination.toLowerCase(),{message:'Choose different origin and destination cities.',path:['destination']}).refine(v=>v.arrival>=v.departure,{message:'Arrival cannot be before departure.',path:['arrival']});
+export const offerSchema=z.object({message:z.string().trim().min(5,'Add a little more detail to your offer.'),date,purchasing:z.enum(['Requester buys','Traveller buys']),handover:z.enum(['In person','Collection','Locally arranged delivery'])});
+export function validate<T>(schema:z.ZodType<T>,input:unknown):T {const result=schema.safeParse(input);if(!result.success)throw new Error(result.error.issues[0]?.message||'Check the form details.');return result.data;}
