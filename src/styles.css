@@ -95,3 +95,4 @@ svg { flex-shrink:0; } .wrap { width: min(1160px, calc(100% - 80px)); margin: 0 
 .guide-copy p {color:var(--muted-foreground);font-size:15px;line-height:1.8;max-width:480px;}
 .article-tail h2 {margin-top:0;}
 @media(max-width:980px){.guide-step,.guide-step.reverse{grid-template-columns:1fr;gap:22px;}.guide-step.reverse .guide-media{order:0;}.guide-steps{gap:42px;}}
+.row-when {display:block;font-size:11px;color:var(--muted-foreground);margin-top:4px;}
