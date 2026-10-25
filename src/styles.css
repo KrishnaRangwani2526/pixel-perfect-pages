@@ -28,7 +28,7 @@ body { margin: 0; background: var(--background); color: var(--foreground); font-
 button,a,input,select,textarea { -webkit-tap-highlight-color: transparent; }
 button { font-family: inherit; }
 :focus-visible { outline: 2px solid var(--primary); outline-offset: 4px; }
-h1,h2,h3,p { margin: 0; } h1,h2,h3 { line-height: 1.22; font-weight: 650; } h1 {font-size: 38px;} h2 {font-size:30px;} h3 {font-size:18px;}
+h1,h2,h3,p { margin: 0; } h1,h2,h3 { line-height: 1.22; font-weight: 650; } h1 {font-size: 38px; letter-spacing:-.4px;} h2 {font-size:30px; letter-spacing:-.3px;} h3 {font-size:18px;}
 svg { flex-shrink:0; } .wrap { width: min(1160px, calc(100% - 80px)); margin: 0 auto; }
 .site-header { height: 84px; border-bottom: 1px solid var(--border); background:var(--background); position:relative; z-index:30; }
 .header-inner { height:100%; display:flex; align-items:center; gap:40px; }
