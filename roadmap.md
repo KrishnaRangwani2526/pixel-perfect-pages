@@ -6,4 +6,5 @@
 - [x] Test marketplace rules and verify requester/traveller journeys.
 - [x] Refine layout alignment, compact-width navigation, listing card rhythm, and the homepage request entry point.
 - [x] Professional polish pass: redesigned how-it-works with photographed step sections, heading typography, dashboard/notifications timestamps.
+- [x] Clarify homepage messaging with a direct explanation, four exchange steps, and friendly section captions based on the latest references.
 - [ ] Final source-copy reconciliation: blocked by the unprovided BringMe.html and full PRD v0.2. Remaining advanced PRD depth is documented in README.
